@@ -14,9 +14,6 @@ lr = 1e-3
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# -------------------------------
-# 2. Data transforms & loader
-# -------------------------------
 train_transforms = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.RandomHorizontalFlip(),
@@ -28,27 +25,20 @@ train_transforms = transforms.Compose([
 train_dataset = datasets.ImageFolder(data_dir, transform=train_transforms)
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
-# -------------------------------
-# 3. Model setup
-# -------------------------------
+
 model = models.resnet18(pretrained=True)
 
-# Freeze backbone
+
 for param in model.parameters():
     param.requires_grad = False
 
-# Replace classifier
 num_features = model.fc.in_features
 model.fc = nn.Linear(num_features, len(train_dataset.classes))  # Output = number of food classes
 model = model.to(device)
 
-# Loss & optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.fc.parameters(), lr=lr)
 
-# -------------------------------
-# 4. Training loop
-# -------------------------------
 for epoch in range(epochs):
     model.train()
     running_loss = 0
@@ -65,12 +55,10 @@ for epoch in range(epochs):
 
     print(f"Epoch {epoch+1}/{epochs}, Loss: {running_loss/len(train_loader):.4f}")
 
-# -------------------------------
-# 5. Save model
-# -------------------------------
 torch.save({
     'model_state_dict': model.state_dict(),
     'classes': train_dataset.classes
 }, save_model_path)
 
 print(f"Training complete! Model saved to {save_model_path}")
+

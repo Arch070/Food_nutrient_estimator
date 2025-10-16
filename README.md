@@ -15,7 +15,7 @@
 
 ## 🌟 Overview  
 
-**Food Nutrition Estimator** is an ** web application** that predicts nutritional information — *Calories, Protein, Carbs, and Fat* — using both **Machine Learning (ML)** and **Deep Learning (DL)**.  
+**Food Nutrition Estimator** is an  web application that predicts nutritional information — *Calories, Protein, Carbs, and Fat* — using both **Machine Learning (ML)** and **Deep Learning (DL)**.  
 
 Users can:
 - 📝 **Type a food name** to get instant nutrition values (ML-based)

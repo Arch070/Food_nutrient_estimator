@@ -64,6 +64,7 @@ This project combines **Python, Flask, PyTorch, scikit-learn, and Tailwind CSS**
 | **Loss Function**   | CrossEntropyLoss    |
 | **Optimizer**       | Adam                |
 | **Model File**      | `food_model.pth`    |
+| **Accuracy**        |         80%         |
 
 ### 🧾 Dataset Import (via KaggleHub)
 ```python

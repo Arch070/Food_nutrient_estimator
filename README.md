@@ -130,7 +130,7 @@ food-nutrition-estimator/
 
 1️⃣ **Clone the repository**
 ```bash
-git clone https://github.com/your-username/food-nutrition-estimator.git
+git clone https://github.com/Arch070/Food_nutrient_estimator.git
 cd food-nutrition-estimator/backend
 ```
 

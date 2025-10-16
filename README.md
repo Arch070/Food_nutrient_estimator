@@ -8,6 +8,8 @@
 ![Chart.js](https://img.shields.io/badge/Chart.js-Visualization-pink)
 ![Kaggle Dataset](https://img.shields.io/badge/Dataset-Food41-blueviolet)
 ![Status](https://img.shields.io/badge/Status-Active-success)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-ResNet18-red)
+
 
 ---
 
